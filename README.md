@@ -52,7 +52,7 @@ yarn add react-hook-form-optimized-controller
 
 ```tsx
 import { useForm } from 'react-hook-form';
-import OptimizedFieldController from 'react-hook-form-optimized-controller';
+import { OptimizedController } from 'react-hook-form-optimized-controller';
 
 function MyForm() {
 	const { control } = useForm({
@@ -61,8 +61,8 @@ function MyForm() {
 
 	return (
 		<form>
-			{/* OptimizedFieldController only subscribes to 'value' and 'disabled' */}
-			<OptimizedFieldController
+			{/* OptimizedController only subscribes to 'value' and 'disabled' */}
+			<OptimizedController
 				control={control}
 				name='username'
 				render={({ onChange, onBlur, value, ref }) => (
@@ -95,15 +95,15 @@ The API is similar to `Controller` but with an **important difference**:
 
 ### **Differences from `Controller`**
 
-| Feature                                     | `Controller` | `OptimizedFieldController` |
-| ------------------------------------------- | ------------ | -------------------------- |
-| Subscribes to `value`                       | ✅           | ✅                         |
-| Subscribes to `disabled`                    | ✅           | ✅                         |
-| Subscribes to `fieldState`                  | ✅           | ❌                         |
-| Subscribes to `formState`                   | ✅           | ❌                         |
-| Access to `isTouched`, `isDirty`, `isValid` | ✅           | ❌                         |
-| Access to `errors`                          | ✅           | ❌                         |
-| Prevents unnecessary re-renders             | ❌           | ✅                         |
+| Feature                                     | `Controller` | `OptimizedController` |
+| ------------------------------------------- | ------------ | --------------------- |
+| Subscribes to `value`                       | ✅           | ✅                    |
+| Subscribes to `disabled`                    | ✅           | ✅                    |
+| Subscribes to `fieldState`                  | ✅           | ❌                    |
+| Subscribes to `formState`                   | ✅           | ❌                    |
+| Access to `isTouched`, `isDirty`, `isValid` | ✅           | ❌                    |
+| Access to `errors`                          | ✅           | ❌                    |
+| Prevents unnecessary re-renders             | ❌           | ✅                    |
 
 ---
 
@@ -123,7 +123,7 @@ If you need access to `fieldState` or `formState`, use `useFormState()` separate
 
 ```tsx
 import { useForm, useFormState } from 'react-hook-form';
-import OptimizedFieldController from 'react-hook-form-optimized-controller';
+import { OptimizedController } from 'react-hook-form-optimized-controller';
 
 function MyForm() {
 	const { control } = useForm();
@@ -131,7 +131,7 @@ function MyForm() {
 
 	return (
 		<form>
-			<OptimizedFieldController
+			<OptimizedController
 				control={control}
 				name='email'
 				render={(field) => (

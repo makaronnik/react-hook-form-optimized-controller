@@ -1,6 +1,6 @@
 {
 	"name": "react-hook-form-optimized-controller",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Optimized Controller component for react-hook-form to reduce unnecessary field re-renders.",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
