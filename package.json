@@ -1,0 +1,33 @@
+{
+	"name": "react-hook-form-optimized-controller",
+	"version": "1.0.0",
+	"description": "Optimized Controller component for react-hook-form to reduce unnecessary field re-renders.",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/makaronnik/react-hook-form-optimized-controller.git"
+	},
+	"keywords": [
+		"react",
+		"react-hook-form",
+		"controller",
+		"optimized"
+	],
+	"author": "Andriy Karpishyn",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsup",
+		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"react": "^18.0.0",
+		"react-hook-form": "^7.45.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19.0.10",
+		"tsup": "^7.2.0",
+		"typescript": "^5.8.2"
+	}
+}
